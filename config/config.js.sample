@@ -9,13 +9,13 @@
  */
 
 var config = {
-	address: "localhost", // Address to listen on, can be:
+    address: "192.168.18.199", // Address to listen on, can be:
 	                      // - "localhost", "127.0.0.1", "::1" to listen on loopback interface
 	                      // - another specific IPv4/6 to listen on a specific interface
 	                      // - "", "0.0.0.0", "::" to listen on any interface
 	                      // Default, when address config is left out, is "localhost"
 	port: 8080,
-	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"], // Set [] to allow all IP addresses
+	ipWhitelist: ["192.168.16.0/21"], // Set [] to allow all IP addresses
 	                                                       // or add a specific IPv4 of 192.168.1.5 :
 	                                                       // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.5"],
 	                                                       // or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
@@ -35,7 +35,7 @@ var config = {
 		},
 		{
 			module: "clock",
-			position: "top_left"
+			position: "top_center"
 		},
 		{
 			module: "calendar",
@@ -51,16 +51,12 @@ var config = {
 			}
 		},
 		{
-			module: "compliments",
-			position: "lower_third"
-		},
-		{
 			module: "currentweather",
-			position: "top_right",
+			position: "top_center",
 			config: {
-				location: "New York",
-				locationID: "",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "YOUR_OPENWEATHER_API_KEY"
+				location: "Lampeter",
+				locationID: "2644981",  //ID from http://www.openweathermap.org/help/city_list.txt
+				appid: "b053d561c3372fff2400e28aa30d6b63"
 			}
 		},
 		{
@@ -68,11 +64,25 @@ var config = {
 			position: "top_right",
 			header: "Weather Forecast",
 			config: {
-				location: "New York",
-				locationID: "5128581",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "YOUR_OPENWEATHER_API_KEY"
+				location: "Lampeter",
+				locationID: "2644981",  //ID from http://www.openweathermap.org/help/city_list.txt
+				appid: "b053d561c3372fff2400e28aa30d6b63"
 			}
 		},
+        {
+            module: "MMM-StaticTides",
+           	position: "top_right",
+        	config: {
+		        apiKey: "6aab7fdd-ff79-4ff2-8eef-4a9a9f2c275c",          // free from https://www.worldtides.info/developer
+		        lat: "40.537661",                // your latitude
+		        lon: "-74.128333",               // your longitude
+		        useHeader: false,                // False if you don't want a header
+		        header: "",                      // Change in config file. useHeader must be true
+		        maxWidth: "300px",
+		        animationSpeed: 3000,            // fade speed
+        		rotateInterval: 15 * 1000,       // seconds between tides displayed
+	        }
+        },
 		{
 			module: "newsfeed",
 			position: "bottom_bar",
