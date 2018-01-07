@@ -10,5 +10,26 @@
  *****************************************************/
 
  body {
- 	
+    margin: 20px;
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
  }
+
+ .MMM-StaticTides {
+    width : 280px;
+ }
+
+/*  .calendar {
+     max-width: 370px;
+ } */
+
+/*  .calendar .title {
+     max-width: 180px;
+ } */
+
+ .weatherforecast tr.colored .rain {
+    padding-left: 20px;
+    padding-right: 0;
+    color: rgb(77, 118, 255)
+  }
+
