@@ -56,7 +56,7 @@ var config = {
 			config: {
 				location: "Lampeter",
 				locationID: "2644981",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "b053d561c3372fff2400e28aa30d6b63"
+				appid: ""
 			}
 		},
 		{
@@ -66,16 +66,16 @@ var config = {
 			config: {
 				location: "Lampeter",
 				locationID: "2644981",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "b053d561c3372fff2400e28aa30d6b63"
+				appid: ""
 			}
 		},
         {
             module: "MMM-StaticTides",
            	position: "top_right",
         	config: {
-		        apiKey: "6aab7fdd-ff79-4ff2-8eef-4a9a9f2c275c",          // free from https://www.worldtides.info/developer
-		        lat: "40.537661",                // your latitude
-		        lon: "-74.128333",               // your longitude
+		        apiKey: "",          // free from https://www.worldtides.info/developer
+		        lat: "",                // your latitude
+		        lon: "",               // your longitude
 		        useHeader: false,                // False if you don't want a header
 		        header: "",                      // Change in config file. useHeader must be true
 		        maxWidth: "300px",
